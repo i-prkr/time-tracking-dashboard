@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/i-prkr/time-tracking-dashboard)
-- Live Site URL: [Github Pages]()
+- Live Site URL: [Vercel](time-tracking-dashboard-ebon-two.vercel.app)
 
 ## My process
 
@@ -45,14 +45,18 @@ Users should be able to:
 
 ### What I learned
 
+I was able to learn and use CSS attributes, having not used them much before. It was fun to implement the page filtering through the use of CSS, and I can see some benefits in this without having to remove and add elements to the DOM when interacting during runtime.
+
 ### Continued development
+
+I am eager to continue becoming deeply familiar with these more advanced CSS techniques, and learning better how to integrate them into projects. I also felt I was better at spending time planning out the solution this time before building, and want to keep working on this.
 
 ### Useful resources
 
 https://css-tricks.com/snippets/css/css-triangle/
 
-- [Triangle in CSS](https://css-tricks.com/snippets/css/css-triangle/) - This helped me to create a CSS triangle for the bottom of the share bar when viewed on larger screens.
-- [MDN SVG](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started) - This helped with understanding SVG files and how to manipulate them for correct sizing and placement.
+- [Frontend article](https://www.frontendmentor.io/learning-paths/javascript-fundamentals-oR7g6-mTZ-/steps/66e0dd9a5832c087f234d6c0/article/read) - This introduced me to the idea of using CSS attributes for filtering.
+- [MDN CSS Attributes](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
 
 ## Author
 
