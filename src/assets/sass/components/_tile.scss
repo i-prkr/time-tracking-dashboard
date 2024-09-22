@@ -1,0 +1,172 @@
+@use "sass:color";
+
+@use "../base/typography" as *;
+@use "../utils/colours" as *;
+@use "../utils/mixins" as *;
+
+.tile {
+  &__container {
+    transition: scale 0.3s;
+    position: relative;
+    color: $white;
+
+    &-title {
+      margin-block-end: 6rem;
+    }
+
+    @include respond-to("large") {
+      min-height: 12.5rem;
+      min-width: 16rem;
+    }
+
+    &:hover {
+      scale: 1.05;
+
+      > .tile__body {
+        background-color: color.adjust($dark-blue, $lightness: 25%);
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    transform: translateY(-2rem);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    &-title {
+      justify-content: flex-start;
+      transform: translateY(6rem);
+      background-color: $dark-blue;
+    }
+  }
+
+  &__background-icon {
+    transform: translate(-2rem, -0.5rem);
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: $dark-blue;
+    border-radius: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 1.75rem;
+
+    &-title {
+      background-color: $blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      justify-content: center;
+      transform: translateY(-2rem);
+
+      @include respond-to("large") {
+        align-items: start;
+        height: 90%;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu-icon {
+    width: 1.313rem;
+    height: 0.313rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include respond-to("large") {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__avatar {
+    border: solid 0.18rem $white;
+    border-radius: 50%;
+  }
+
+  &__text {
+    &-selection {
+      &:hover {
+        color: $white;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__selections {
+    color: $pale-blue;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    padding-block-end: 3rem;
+
+    @include respond-to("medium") {
+      > p {
+        font-size: $fs-large;
+      }
+    }
+
+    @include respond-to("large") {
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+      gap: 1rem;
+      padding-inline-start: 3rem;
+      padding-block-end: 1.3rem;
+
+      > p {
+        font-size: $fs-regular;
+      }
+    }
+  }
+}
+
+.tile__background[data-activity="Work"] {
+  background-color: $light-red-work;
+}
+
+.tile__background[data-activity="Play"] {
+  background-color: $soft-blue-play;
+}
+
+.tile__background[data-activity="Study"] {
+  background-color: $light-red-study;
+}
+
+.tile__background[data-activity="Exercise"] {
+  background-color: $lime-green-exercise;
+}
+
+.tile__background[data-activity="Social"] {
+  background-color: $violet-social;
+}
+
+.tile__background[data-activity="Self Care"] {
+  background-color: $soft-orange-selfcare;
+}

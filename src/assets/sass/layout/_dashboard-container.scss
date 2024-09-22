@@ -1,0 +1,61 @@
+@use "../utils/mixins" as *;
+
+.dashboard-container {
+  width: 100%;
+  display: grid;
+  gap: 4rem;
+  padding-inline: 1.5rem;
+  padding-block: 4rem;
+  grid-template:
+    "title"
+    "a"
+    "b"
+    "c"
+    "d"
+    "e"
+    "f";
+  @include respond-to("medium") {
+    grid-template:
+      "title title"
+      "a b"
+      "c d"
+      "e f";
+  }
+
+  @include respond-to("large") {
+    grid-template:
+      "title a b c"
+      "title d e f";
+    padding-inline: 10rem;
+    column-gap: 2rem;
+  }
+}
+
+// filter options using css attributes
+
+// daily selected
+.dashboard-container[data-filter="Daily"] article[data-timeframe="weekly"] {
+  display: none;
+}
+
+.dashboard-container[data-filter="Daily"] article[data-timeframe="monthly"] {
+  display: none;
+}
+
+// weekly selected
+.dashboard-container[data-filter="Weekly"] article[data-timeframe="monthly"] {
+  display: none;
+}
+
+.dashboard-container[data-filter="Weekly"] article[data-timeframe="daily"] {
+  display: none;
+}
+
+// monthly selected
+.dashboard-container[data-filter="Monthly"] article[data-timeframe="daily"] {
+  display: none;
+}
+
+.dashboard-container[data-filter="Monthly"] article[data-timeframe="weekly"] {
+  display: none;
+}

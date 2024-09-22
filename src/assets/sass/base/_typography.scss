@@ -1,0 +1,84 @@
+@use "../utils/colours" as *;
+@use "../utils/mixins" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+$fs-small: 0.938rem;
+$fs-regular: 1.125rem;
+
+$fs-large: 1.5rem;
+$fs-tablet-large: 1.8rem;
+$fs-desktop-large: 2.5rem;
+
+$fs-xlarge: 2rem;
+$fs-tablet-xlarge: 2.8rem;
+$fs-desktop-xlarge: 3.5rem;
+
+span,
+p,
+a,
+li,
+label,
+input,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", sans-serif;
+  font-size: $fs-regular;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.text {
+  &-small {
+    font-size: $fs-small;
+  }
+
+  &-regular {
+    font-size: $fs-regular;
+  }
+
+  &-large {
+    font-size: $fs-large;
+
+    @include respond-to("medium") {
+      font-size: $fs-tablet-large;
+    }
+
+    @include respond-to("large") {
+      font-size: $fs-desktop-large;
+    }
+  }
+
+  &-xlarge {
+    font-size: $fs-xlarge;
+
+    @include respond-to("medium") {
+      font-size: $fs-tablet-xlarge;
+    }
+
+    @include respond-to("large") {
+      font-size: $fs-desktop-xlarge;
+    }
+  }
+
+  &-weight-400 {
+    font-weight: 400;
+  }
+
+  &-weight-500 {
+    font-weight: 500;
+  }
+
+  &-white {
+    color: $white;
+  }
+
+  &-gray {
+    color: $pale-blue;
+  }
+}

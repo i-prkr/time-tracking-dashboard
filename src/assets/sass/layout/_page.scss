@@ -1,0 +1,11 @@
+@use "../utils/colours" as *;
+
+.page,
+main {
+  display: grid;
+  place-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: $very-dark-blue;
+  z-index: 0;
+}
