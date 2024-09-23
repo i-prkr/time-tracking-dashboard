@@ -3,11 +3,8 @@
   "source": "index.html",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/assets/js/index.js",
   "targets": {
-    "default": {
-      "distDir": "./dist"
-    }
+  "main": false
   },
   "browserslist": "> 0.5%",
   "directories": {
