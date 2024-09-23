@@ -1,4 +1,4 @@
-import data from '../data.json';
+// import data from '../data.json';
 import titleTile from './components/titleTile.js';
 import createTile from './components/tile.js';
 import workIcon from '../images/icon-work.svg';
