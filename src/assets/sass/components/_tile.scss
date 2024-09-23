@@ -30,7 +30,7 @@
 
   &__background {
     position: absolute;
-    transform: translateY(-2rem);
+    transform: translateY(-3rem);
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -58,7 +58,10 @@
     background-color: $dark-blue;
     border-radius: 1.5rem;
     padding-inline: 1.5rem;
-    padding-block: 1.75rem;
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 
     &-title {
       background-color: $blue;
@@ -66,8 +69,10 @@
       flex-direction: column;
       align-items: center;
       gap: 2rem;
-      justify-content: center;
-      transform: translateY(-2rem);
+      justify-content: start;
+      padding-block-start: 3rem;
+      padding-inline-start: 2rem;
+      transform: translateY(-3rem);
 
       @include respond-to("large") {
         align-items: start;
@@ -95,6 +100,7 @@
     &-title {
       flex-direction: column;
       justify-content: center;
+      gap: 2rem;
     }
 
     @include respond-to("large") {
@@ -106,6 +112,10 @@
   &__avatar {
     border: solid 0.18rem $white;
     border-radius: 50%;
+
+    @include respond-to("large") {
+      scale: 1.2;
+    }
   }
 
   &__text {
@@ -136,9 +146,9 @@
       flex-direction: column;
       align-items: start;
       justify-content: end;
-      gap: 1rem;
+      gap: 1.5rem;
       padding-inline-start: 3rem;
-      padding-block-end: 1.3rem;
+      padding-block-end: 1.8rem;
 
       > p {
         font-size: $fs-regular;

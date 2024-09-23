@@ -19,7 +19,7 @@ export default createTitleTile = () => {
   <div class="tile__body tile__body-title">
     <div class="tile__content tile__content-title">
       <img src=${avatarImage} class="tile__avatar" alt="headshot of jeremy robson" width=${avatarDimensions.width} height=${avatarDimensions.height} />
-      <p class="tile__text text-gray text-small">Report</p>
+      <p class="tile__text text-gray text-small">Report for</p>
       <h2 class="tile_heading tile_heading-title text-large">Jeremy Robson</h2>
     </div>
   </div>

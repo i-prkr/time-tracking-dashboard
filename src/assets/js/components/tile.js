@@ -16,14 +16,14 @@ export default createTiles = ({area, icon, title, current, previous, timeframe})
     <img src=${icon} class="tile__background-icon" alt="" width=${backgroundIconDimensions.width} height=${backgroundIconDimensions.height}/>
   </div>
   <div class="tile__body text-white">
-    <header>
+    <header class="tile__header">
       <h3 class="tile__title text-weight-500">${title}</h3>
       <img src=${ellipsis} class="tile__menu-icon" alt="ellipsis to open tile menu" width=${menuEllipsisDimensions.width} height=${menuEllipsisDimensions.height}/>
-      <div class="tile__content">
-        <p class="tile__hours text-xlarge">${current}${createHoursString(current)}</p>
-        <p class="tile__text text-gray">Last ${createPreviousString(timeframe)} - ${previous}${createHoursString(previous)}</p>
-      </div>
     </header>
+    <div class="tile__content">
+      <p class="tile__hours text-xlarge">${current}${createHoursString(current)}</p>
+      <p class="tile__text text-gray">Last ${createPreviousString(timeframe)} - ${previous}${createHoursString(previous)}</p>
+    </div>
   </div>
     `
   return newTile;

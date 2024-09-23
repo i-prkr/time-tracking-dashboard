@@ -3,7 +3,7 @@
 .dashboard-container {
   width: 100%;
   display: grid;
-  gap: 4rem;
+  gap: 5rem;
   padding-inline: 1.5rem;
   padding-block: 4rem;
   grid-template:
@@ -28,6 +28,7 @@
       "title d e f";
     padding-inline: 10rem;
     column-gap: 2rem;
+    height: 80%;
   }
 }
 
