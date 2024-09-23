@@ -1,4 +1,4 @@
-import data from '../../../data.json';
+import data from '../data.json';
 import createTitleTile from './components/titleTile';
 import createTile from './components/tile';
 import workIcon from '../images/icon-work.svg';
