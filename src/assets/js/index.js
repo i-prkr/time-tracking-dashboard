@@ -1,5 +1,5 @@
 import data from '../../../data.json';
-import createTitleTile from './components/tile-title';
+import createTitleTile from './components/titleTile';
 import createTile from './components/tile';
 import workIcon from '../images/icon-work.svg';
 import playIcon from '../images/icon-play.svg';
