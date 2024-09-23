@@ -3,6 +3,12 @@
   "source": "index.html",
   "version": "1.0.0",
   "description": "",
+  "targets": {
+    "default": {
+      "distDir": "./public"
+    }
+  },
+  "browserslist": "> 0.5%",
   "directories": {
     "doc": "docs"
   },
