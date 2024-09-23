@@ -1,5 +1,5 @@
 import data from '../data.json';
-import createTitleTile from './components/titleTile.js';
+import titleTile from './components/titleTile.js';
 import createTile from './components/tile.js';
 import workIcon from '../images/icon-work.svg';
 import playIcon from '../images/icon-play.svg';
@@ -20,8 +20,8 @@ function Dashboard() {
     "Self Care": selfCareIcon
   }
 
-  const titleTile = createTitleTile();
-  dashboardContainer.appendChild(titleTile);
+  const newTitleTile = titleTile();
+  dashboardContainer.appendChild(newTitleTile);
 
   data.forEach((activity, i) => {
 
