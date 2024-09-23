@@ -25,7 +25,7 @@ function Dashboard() {
 
   data.forEach((activity, i) => {
 
-    // loop over data and add tiles one by one
+    // loop over the data and add tiles one by one
     Object.keys(activity.timeframes).forEach((timeframe) => {
       const tileInfo = {
         area: gridAreas[i],
