@@ -1,6 +1,6 @@
 import ellipsis from '../images/icon-ellipsis.svg';
 
-export default createTile = ({area, icon, title, current, previous, timeframe}) => {
+export function createTile ({area, icon, title, current, previous, timeframe}) {
   const backgroundIconDimensions = {width: 78, height: 78};
   const menuEllipsisDimensions = {width: 5, height: 21};
   

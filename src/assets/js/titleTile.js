@@ -1,6 +1,6 @@
 import avatarImage from '../images/image-jeremy.png';
 
-export default createTitleTile = () => {
+export function createTitleTile () {
   const avatarDimensions = {width: 85, height: 85};
 
   // create tile

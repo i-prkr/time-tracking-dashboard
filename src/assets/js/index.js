@@ -5,10 +5,8 @@ import studyIcon from '../images/icon-study.svg';
 import exerciseIcon from '../images/icon-exercise.svg';
 import socialIcon from '../images/icon-social.svg';
 import selfCareIcon from '../images/icon-self-care.svg';
-import createTile from './tile.js';
-import createTitleTile from './titleTile.js';
 
-function Dashboard() {
+async function Dashboard() {
   const dashboardContainer = document.querySelector(".dashboard-container");
   const gridAreas = ["a","b","c","d","e","f"];
   const icons = {
@@ -19,8 +17,10 @@ function Dashboard() {
     "Social": socialIcon,
     "Self Care": selfCareIcon
   }
+  const tile = await import('./tile.js');
+  const titleTile = await import('./titleTile.js');
 
-  const newTitleTile = createTitleTile();
+  const newTitleTile = titleTile.createTitleTile();
   dashboardContainer.appendChild(newTitleTile);
 
   data.forEach((activity, i) => {
@@ -36,8 +36,8 @@ function Dashboard() {
         timeframe
       }
       
-      const tile = createTile(tileInfo);
-      dashboardContainer.appendChild(tile)
+      const newTile = tile.createTile(tileInfo);
+      dashboardContainer.appendChild(newTile)
     })
   })
   addFiltering(dashboardContainer);
